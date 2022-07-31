@@ -12,6 +12,7 @@ const GameScreen = () => {
   const [userSteps, setUserSteps] = useState([]);
 
   useEffect(() => {
+    // handle game start
     gameSteps.length === 0 && addStepToTheGame();
     setUserSteps([]);
 
@@ -25,6 +26,8 @@ const GameScreen = () => {
       const lastUserStepIndex = userSteps.length - 1;
       const lastUserStep = userSteps[lastUserStepIndex];
       const equalStepOfGame = gameSteps[lastUserStepIndex];
+      //TODO  need to add here check if user step is equal to game step
+      //TODO and check if not so res the game
     }
   }, [userSteps]);
 
